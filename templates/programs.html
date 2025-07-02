@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Twój nagłówek -->
+  <div id="text">Mateusz Gogola</div>
+
+  <!-- Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ url_for('about') }}">O mnie</a></li>
+      <li><a href="{{ url_for('programs') }}">Programy</a></li>
+      <li><a href="{{ url_for('robotyka') }}">Robotyka</a></li>
+      <li><a href="{{ url_for('prace') }}">Prace naukowe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sekcja Programy -->
+  <section id="programy">
+    <h2>Programy</h2>
+    <div class="programy-container">
+      {% for p in programs %}
+      <div class="program-card">
+        <img src="{{ url_for('static', filename=p.img) }}" alt="{{ p.title }}">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

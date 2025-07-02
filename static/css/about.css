@@ -1,0 +1,82 @@
+/* static/css/about.css */
+
+/* ---- Sekcja całościowo ---- */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;           /* centrowanie w poziomie */
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+/* ozdobna linia pod tytułem */
+#about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 0.5rem auto 0;
+}
+
+/* ---- Kontener wewnętrzny ---- */
+.about-container {
+  display: flex;
+  flex-direction: column;        /* kolumny jedna pod drugą */
+  align-items: center;           /* centrowanie całego bloku */
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Obrazek profilu */
+.about-photo {
+  flex: 0 0 auto;
+  text-align: center;
+}
+.about-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tekst opisowy */
+.about-text {
+  flex: 1 1 auto;
+  max-width: 600px;
+  text-align: center;            /* na małych ekranach centrowanie */
+}
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  hyphens: auto;
+}
+.about-text ul {
+  list-style: disc inside;
+  margin: 1rem auto 0;
+  padding: 0;
+  max-width: 400px;
+  text-align: left;              /* punktor wyrównany do lewej */
+}
+
+/* ---- Układ dla szerokich ekranów (>768px) ---- */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;         /* dwie kolumny obok siebie */
+    align-items: flex-start;     /* wyrównaj do góry */
+    gap: 3rem;
+  }
+  .about-text {
+    text-align: left;            /* lewostronne akapity */
+  }
+}

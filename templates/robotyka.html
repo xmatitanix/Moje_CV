@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Nagłówek z Twoim imieniem -->
+  <div id="text">Mateusz Gogola</div>
+
+  <!-- Menu nawigacji -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ url_for('about') }}">O mnie</a></li>
+      <li><a href="{{ url_for('programs') }}">Programy</a></li>
+      <li><a href="{{ url_for('robotyka') }}">Robotyka</a></li>
+      <li><a href="{{ url_for('prace') }}">Prace naukowe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sekcja Robotyka -->
+  <section id="robotyka">
+    <h2>Robotyka</h2>
+    <div class="robotyka-container">
+      <!-- przykładowy projekt robotyczny #1 -->
+      <div class="robot-card">
+        <h3>Autonomiczny robot mobilny</h3>
+        <p><em>Technologie:</em> ROS, Python, LIDAR</p>
+        <p>Robot wyposażony w lidar i kamerę RGB, potrafi mapować otoczenie i omijać przeszkody.</p>
+        <p><a href="#" target="_blank">Więcej →</a></p>
+      </div>
+
+      <!-- przykładowy projekt robotyczny #2 -->
+      <div class="robot-card">
+        <h3>Ramię manipulacyjne</h3>
+        <p><em>Technologie:</em> Arduino, serwomechanizmy, OpenCV</p>
+        <p>Precyzyjna kontrola położenia chwytaka za pomocą śledzenia koloru obiektu w OpenCV.</p>
+        <p><a href="#" target="_blank">Więcej →</a></p>
+      </div>
+
+      <!-- przykładowy projekt robotyczny #3 -->
+      <div class="robot-card">
+        <h3>Droneka do inspekcji</h3>
+        <p><em>Technologie:</em> PX4, MAVLink, GPS</p>
+        <p>Bezzałogowy dron do autonomicznej inspekcji linii wysokiego napięcia z automatycznym powrotem.</p>
+        <p><a href="#" target="_blank">Więcej →</a></p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,55 @@
+/* radial.css */
+
+body {
+  background: #1a1a1a;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#radial-circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  touch-action: none;
+}
+
+#radial-handle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  /* siatka 6×6px */
+  background-image:
+    linear-gradient(var(--grid-color, rgba(200,200,200,0.4)) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color, rgba(200,200,200,0.4)) 1px, transparent 1px);
+  background-size: 6px 6px;
+  cursor: grab;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+}
+
+/* pulsowanie podczas drag */
+@keyframes pulse {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.15); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+#radial-handle.dragging {
+  animation: pulse 0.8s ease-in-out infinite;
+}
+
+#message {
+  margin-top: 1rem;
+  color: #ddd;
+  font-size: 1.25rem;
+  text-align: center;
+}

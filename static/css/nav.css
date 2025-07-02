@@ -1,0 +1,35 @@
+/* static/css/nav.css */
+
+/* Kontener nawigacji */
+.main-nav {
+  margin: 1.5rem auto 2rem;    /* więcej odstępu nad i pod menu */
+  max-width: 600px;            /* ograniczamy szerokość menu */
+  width: 100%;
+}
+
+/* Lista pozioma z równym odstępem pomiędzy elementami */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly; /* rozstawia linki równomiernie */
+  align-items: center;
+}
+
+/* Linki – większa czcionka i wygodniejsze “kliknięcie” */
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;       /* większa niż domyślna wart. */
+  color: #333;
+  padding: 0.5rem 1rem;     /* klikana powierzchnia */
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px;
+}
+
+/* Hover efekt: podświetlenie tła i zmiana koloru */
+.main-nav a:hover {
+  color: #fff;
+  background-color: #4a00e0;
+}

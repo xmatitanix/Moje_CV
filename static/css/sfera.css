@@ -1,0 +1,37 @@
+/* static/css/sphere.css */
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.sphere-animation {
+  width: 100%;
+  padding-bottom: 0; /* Remove extra padding */
+}
+
+.animation-wrapper {
+  position: relative;
+  height: calc(100vh - 100px); /* Adjust height dynamically */
+  margin: 0 auto;
+  padding: 0;
+}
+.sphere {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Usuwamy fill z CSS – będzie w SVG */
+.sphere path {
+  stroke: rgba(255,255,255,0.15);
+  stroke-width: 1px;
+  backface-visibility: hidden;
+}
+
+@media (min-width: 500px) {
+  .sphere path {
+    stroke-width: .4px;
+  }
+}

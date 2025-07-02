@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Twoje imię -->
+  <div id="text">Mateusz Gogola</div>
+
+  <!-- Menu nawigacji -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ url_for('about') }}">O mnie</a></li>
+      <li><a href="{{ url_for('programs') }}">Programy</a></li>
+      <li><a href="{{ url_for('robotyka') }}">Robotyka</a></li>
+      <li><a href="{{ url_for('prace') }}">Prace naukowe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sekcja Prace naukowe -->
+  <section id="prace">
+    <h2>Prace naukowe</h2>
+    <div class="prace-container">
+      <!-- przykładowa karta pracy -->
+      <div class="praca-card">
+        <h3>Tytuł pracy 1</h3>
+        <p><em>Autorzy:</em> Jan Kowalski, Mateusz Gogola</p>
+        <p><strong>Streszczenie:</strong> Krótkie podsumowanie najważniejszych wniosków z pracy numer 1…</p>
+        <p><a href="#" target="_blank">Pobierz PDF</a></p>
+      </div>
+
+      <div class="praca-card">
+        <h3>Tytuł pracy 2</h3>
+        <p><em>Autorzy:</em> Anna Nowak, Mateusz Gogola</p>
+        <p><strong>Streszczenie:</strong> Kilka zdań o celach i wynikach badania numer 2…</p>
+        <p><a href="#" target="_blank">Pobierz PDF</a></p>
+      </div>
+
+      <div class="praca-card">
+        <h3>Tytuł pracy 3</h3>
+        <p><em>Autorzy:</em> Mateusz Gogola</p>
+        <p><strong>Streszczenie:</strong> Opis metody i rezultatów z projektu numer 3…</p>
+        <p><a href="#" target="_blank">Pobierz PDF</a></p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

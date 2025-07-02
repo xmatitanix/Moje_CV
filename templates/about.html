@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Nagłówek z Twoim imieniem -->
+  <div id="text">Mateusz Gogola</div>
+
+  <!-- Menu nawigacji -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="{{ url_for('about') }}">O mnie</a></li>
+      <li><a href="{{ url_for('programs') }}">Programy</a></li>
+      <li><a href="{{ url_for('robotyka') }}">Robotyka</a></li>
+      <li><a href="{{ url_for('prace') }}">Prace naukowe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sekcja O mnie -->
+  <section id="about">
+    <h2>O mnie</h2>
+    <div class="about-container">
+      <!-- Kolumna ze zdjęciem -->
+      <div class="about-photo">
+        <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Mateusz Gogola">
+      </div>
+      <!-- Kolumna z opisem -->
+      <div class="about-text">
+        <p>Cześć! Nazywam się <strong>Mateusz Gogola</strong>. Jestem pasjonatem programowania, robotyki i nauki danych. Od kilku lat tworzę aplikacje webowe we Flasku, piszę skrypty do analizy danych i buduję własne roboty mobilne.</p>
+        <p>W wolnym czasie eksperymentuję z dronami autonomicznymi, biorę udział w hackathonach i rozwijam projekty open-source. Lubię też dzielić się wiedzą – prowadziłem warsztaty z Pythona i Arduino dla studentów.</p>
+        <p>Moje główne umiejętności to:</p>
+        <ul>
+          <li>Python &amp; Flask</li>
+          <li>Robot Operating System (ROS)</li>
+          <li>Analiza danych (Pandas, Matplotlib)</li>
+          <li>Elektronika i mikrokontrolery (Arduino, Raspberry Pi)</li>
+        </ul>
+        <p>Chętnie podejmuję nowe wyzwania i uczę się nowych technologii. Jeśli masz pytania lub chcesz porozmawiać o współpracy, napisz do mnie!</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

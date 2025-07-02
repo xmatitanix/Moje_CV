@@ -1,0 +1,154 @@
+/* static/css/style.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  position: relative;
+  background: url('../img/header-bg.jpg') center/cover no-repeat fixed;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+.typed-element {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #ffd700;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin-top: 8px;
+}
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #fff;
+}
+#skills .container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+#skillsChart {
+  width: 100% !important;
+  max-width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+#projects .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#projects .card {
+  width: 100%;
+  max-width: 320px;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#projects .card img {
+  width: 100%;
+  display: block;
+}
+#projects .card-body {
+  padding: 20px;
+}
+#projects .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+#projects .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+#projects .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Parallax Utility */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Links & Buttons */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer (optional) */
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+  }
+  section {
+    padding: 40px 10px;
+  }
+  #projects .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

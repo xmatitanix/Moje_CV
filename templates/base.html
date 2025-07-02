@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mateusz Gogola – CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/programs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prace.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/robotyka.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sphere.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scramble.css') }}">
+</head>
+<body>
+  {% block content %}{% endblock %}
+
+  <!-- Anime.js core -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <!-- GSAP core -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <!-- GSAP Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <!-- Custom Scripts -->
+  <script src="{{ url_for('static', filename='js/sphere.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/scramble.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrambleTextPlugin, SplitText);
+      // Add your GSAP code here if needed
+    });
+  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrambleTextPlugin, SplitText, ScrollToPlugin);
+    // …
+  });
+</script>
+</body>
+</html>

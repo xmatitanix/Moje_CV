@@ -1,0 +1,78 @@
+/* static/css/prace.css */
+
+/* Sekcja „Prace naukowe” */
+#prace {
+  padding: 2rem 1rem;
+}
+
+/* Tytuł sekcji wyśrodkowany z podkreśleniem */
+#prace h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto 1rem;
+  position: relative;
+  max-width: 400px;
+}
+#prace h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 0.5rem auto 0;
+}
+
+/* Kontener prac */
+.prace-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Pojedyncza praca */
+.prace-item {
+  text-align: center;
+}
+.prace-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+.prace-item em {
+  display: block;
+  font-style: normal;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.prace-item strong {
+  font-weight: 600;
+}
+.prace-item p {
+  margin: 0.25rem 0 0.75rem;
+  line-height: 1.5;
+  color: #333;
+}
+.prace-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.prace-item a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .prace-container {
+    padding: 0;
+  }
+  #prace h2 {
+    font-size: 1.8rem;
+  }
+  .prace-item h3 {
+    font-size: 1.2rem;
+  }
+}
