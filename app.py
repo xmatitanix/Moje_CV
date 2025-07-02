@@ -14,7 +14,7 @@ def about():
 def programs():
     programs = [
         {
-            'img': 'img/prog1.png',
+            'img': 'img/moje_cv_karate1.png',
             'title': 'Menadżer zadań',
             'description': 'Prosty menadżer do śledzenia zadań, z możliwością filtrowania po priorytecie i terminie.'
         },
